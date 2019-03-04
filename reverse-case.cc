@@ -27,7 +27,7 @@ void HERA_main()
     XOR(R1, R7, R4) // Converting to uppercase (then storing in register, R5)
     STORE(R1, 0, R6) // Storing uppercase char into memory
 
-    CALL(R12, PUTCHAR_2)
+    CALL(FP_alt, PUTCHAR_2)
     //CALL(R12, PUTCHAR_ORD)
     //CALL(R12, print)
     INC(R6, 1)
@@ -39,5 +39,5 @@ void HERA_main()
 // #include  <Tiger-stdlib-reg.hera>
    LABEL(PUTCHAR_2)
     OPCODE(0xA001)  //Use ADD(R0,R0,R1) to output to screen
-    RETURN(R12, Rt)
+    RETURN(FP_alt, PC_ret)
 }
