@@ -343,7 +343,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(860,380)" to="(860,390)"/>
     <wire from="(1050,420)" to="(1050,430)"/>
     <comp loc="(140,290)" name="CALL/RETURN"/>
-    <comp loc="(1110,310)" name="enable keyboard"/>
+    <comp loc="(1110,310)" name="key0"/>
     <comp lib="0" loc="(1330,450)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="label" val="key 2 enable"/>
@@ -6069,7 +6069,7 @@ a001 a002
   </circuit>
   <circuit name="Write Enable">
     <a name="circuit" val="Write Enable"/>
-    <a name="clabel" val=""/>
+    <a name="clabel" val="T1"/>
     <a name="clabelup" val="east"/>
     <a name="clabelfont" val="SansSerif plain 12"/>
     <wire from="(390,280)" to="(390,300)"/>
@@ -6134,10 +6134,10 @@ a001 a002
       <a name="value" val="0x0"/>
     </comp>
   </circuit>
-  <circuit name="enable keyboard">
-    <a name="circuit" val="enable keyboard"/>
-    <a name="clabel" val=""/>
-    <a name="clabelup" val="east"/>
+  <circuit name="key0">
+    <a name="circuit" val="key0"/>
+    <a name="clabel" val="key0"/>
+    <a name="clabelup" val="north"/>
     <a name="clabelfont" val="SansSerif plain 12"/>
     <appear>
       <path d="M61,51 Q65,61 69,51" fill="none" stroke="#808080" stroke-width="2"/>
@@ -6220,8 +6220,8 @@ a001 a002
   </circuit>
   <circuit name="key2">
     <a name="circuit" val="key2"/>
-    <a name="clabel" val=""/>
-    <a name="clabelup" val="east"/>
+    <a name="clabel" val="key2"/>
+    <a name="clabelup" val="north"/>
     <a name="clabelfont" val="SansSerif plain 12"/>
     <wire from="(200,200)" to="(360,200)"/>
     <wire from="(250,300)" to="(260,300)"/>
@@ -6295,8 +6295,8 @@ a001 a002
   </circuit>
   <circuit name="enable t2">
     <a name="circuit" val="enable t2"/>
-    <a name="clabel" val=""/>
-    <a name="clabelup" val="east"/>
+    <a name="clabel" val="T2"/>
+    <a name="clabelup" val="north"/>
     <a name="clabelfont" val="SansSerif plain 12"/>
     <wire from="(200,210)" to="(380,210)"/>
     <wire from="(200,250)" to="(380,250)"/>
