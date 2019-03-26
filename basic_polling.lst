@@ -1,0 +1,599 @@
+// .CODE:
+0/ 3160    	// FON
+1/ ed10    	// (matching labels: TOP) SETLO_FOR_SET
+2/ fd00    	// SETHI_FOR_SET
+3/ 20cd    	// CALL
+4/ e101    	// SETLO_FOR_SET
+5/ f1c0    	// SETHI_FOR_SET
+6/ 640f    	// STORE
+7/ e400    	// SETLO_FOR_SET
+8/ f400    	// SETHI_FOR_SET
+9/ ed2c    	// SETLO_FOR_SET
+a/ fd00    	// SETHI_FOR_SET
+b/ 20cd    	// CALL
+c/ eb01    	// SETLO_FOR_SET
+d/ fb00    	// SETHI_FOR_SET
+e/ 100b    	// BR
+f/ 0    	// HALT
+10/ 3f81    	// (matching labels: poll_0) INC
+11/ 6d0e    	// STORE
+12/ 6c1e    	// STORE
+13/ 2a00    	// OPCODE
+14/ 91a0    	// OR
+15/ eb26    	// SETLO_FOR_SET
+16/ fb00    	// SETHI_FOR_SET
+17/ 180b    	// BZ
+18/ ea00    	// SETLO
+19/ 9cf0    	// OR
+1a/ ed2a    	// SETLO_FOR_SET
+1b/ fd00    	// SETHI_FOR_SET
+1c/ 20cd    	// CALL
+1d/ e30a    	// SETLO
+1e/ 3068    	// FON
+1f/ b013    	// SUB
+20/ eb26    	// SETLO_FOR_SET
+21/ fb00    	// SETHI_FOR_SET
+22/ 180b    	// BZ
+23/ eb10    	// SETLO_FOR_SET
+24/ fb00    	// SETHI_FOR_SET
+25/ 100b    	// BR
+26/ 4d0e    	// (matching labels: return) LOAD
+27/ 4c1e    	// LOAD
+28/ 3fc1    	// DEC
+29/ 21cd    	// RETURN
+2a/ a001    	// (matching labels: PUTCHAR_1) ADD
+2b/ 21cd    	// RETURN
+2c/ 3f81    	// (matching labels: poll_1) INC
+2d/ 6d0e    	// STORE
+2e/ 6c1e    	// STORE
+2f/ ea00    	// (matching labels: L) SETLO
+30/ 2a01    	// OPCODE
+31/ 92a0    	// OR
+32/ eb4f    	// SETLO_FOR_SET
+33/ fb00    	// SETHI_FOR_SET
+34/ 180b    	// BZ
+35/ 6a01    	// STORE
+36/ 3180    	// INC
+37/ e30a    	// SETLO
+38/ 3068    	// FON
+39/ b0a3    	// SUB
+3a/ eb40    	// SETLO_FOR_SET
+3b/ fb00    	// SETHI_FOR_SET
+3c/ 180b    	// BZ
+3d/ eb2f    	// SETLO_FOR_SET
+3e/ fb00    	// SETHI_FOR_SET
+3f/ 100b    	// BR
+40/ e500    	// (matching labels: DEAL_WITH_NEWLINE) SETLO_FOR_SET
+41/ f500    	// SETHI_FOR_SET
+42/ e101    	// SETLO_FOR_SET
+43/ f1c0    	// SETHI_FOR_SET
+44/ 4201    	// (matching labels: print_loop) LOAD
+45/ a002    	// ADD
+46/ 3068    	// FON
+47/ b023    	// SUB
+48/ eb4f    	// SETLO_FOR_SET
+49/ fb00    	// SETHI_FOR_SET
+4a/ 180b    	// BZ
+4b/ 3180    	// INC
+4c/ eb44    	// SETLO_FOR_SET
+4d/ fb00    	// SETHI_FOR_SET
+4e/ 100b    	// BR
+4f/ 4d0e    	// (matching labels: return_2) LOAD
+50/ 4c1e    	// LOAD
+51/ 3fc1    	// DEC
+52/ 21cd    	// RETURN
+// .DATA:
+c000/ c201
+c001/ 00 
+c002/ 00 
+c003/ 00 
+c004/ 00 
+c005/ 00 
+c006/ 00 
+c007/ 00 
+c008/ 00 
+c009/ 00 
+c00a/ 00 
+c00b/ 00 
+c00c/ 00 
+c00d/ 00 
+c00e/ 00 
+c00f/ 00 
+c010/ 00 
+c011/ 00 
+c012/ 00 
+c013/ 00 
+c014/ 00 
+c015/ 00 
+c016/ 00 
+c017/ 00 
+c018/ 00 
+c019/ 00 
+c01a/ 00 
+c01b/ 00 
+c01c/ 00 
+c01d/ 00 
+c01e/ 00 
+c01f/ 00 
+c020/ 00 
+c021/ 00 
+c022/ 00 
+c023/ 00 
+c024/ 00 
+c025/ 00 
+c026/ 00 
+c027/ 00 
+c028/ 00 
+c029/ 00 
+c02a/ 00 
+c02b/ 00 
+c02c/ 00 
+c02d/ 00 
+c02e/ 00 
+c02f/ 00 
+c030/ 00 
+c031/ 00 
+c032/ 00 
+c033/ 00 
+c034/ 00 
+c035/ 00 
+c036/ 00 
+c037/ 00 
+c038/ 00 
+c039/ 00 
+c03a/ 00 
+c03b/ 00 
+c03c/ 00 
+c03d/ 00 
+c03e/ 00 
+c03f/ 00 
+c040/ 00 
+c041/ 00 
+c042/ 00 
+c043/ 00 
+c044/ 00 
+c045/ 00 
+c046/ 00 
+c047/ 00 
+c048/ 00 
+c049/ 00 
+c04a/ 00 
+c04b/ 00 
+c04c/ 00 
+c04d/ 00 
+c04e/ 00 
+c04f/ 00 
+c050/ 00 
+c051/ 00 
+c052/ 00 
+c053/ 00 
+c054/ 00 
+c055/ 00 
+c056/ 00 
+c057/ 00 
+c058/ 00 
+c059/ 00 
+c05a/ 00 
+c05b/ 00 
+c05c/ 00 
+c05d/ 00 
+c05e/ 00 
+c05f/ 00 
+c060/ 00 
+c061/ 00 
+c062/ 00 
+c063/ 00 
+c064/ 00 
+c065/ 00 
+c066/ 00 
+c067/ 00 
+c068/ 00 
+c069/ 00 
+c06a/ 00 
+c06b/ 00 
+c06c/ 00 
+c06d/ 00 
+c06e/ 00 
+c06f/ 00 
+c070/ 00 
+c071/ 00 
+c072/ 00 
+c073/ 00 
+c074/ 00 
+c075/ 00 
+c076/ 00 
+c077/ 00 
+c078/ 00 
+c079/ 00 
+c07a/ 00 
+c07b/ 00 
+c07c/ 00 
+c07d/ 00 
+c07e/ 00 
+c07f/ 00 
+c080/ 00 
+c081/ 00 
+c082/ 00 
+c083/ 00 
+c084/ 00 
+c085/ 00 
+c086/ 00 
+c087/ 00 
+c088/ 00 
+c089/ 00 
+c08a/ 00 
+c08b/ 00 
+c08c/ 00 
+c08d/ 00 
+c08e/ 00 
+c08f/ 00 
+c090/ 00 
+c091/ 00 
+c092/ 00 
+c093/ 00 
+c094/ 00 
+c095/ 00 
+c096/ 00 
+c097/ 00 
+c098/ 00 
+c099/ 00 
+c09a/ 00 
+c09b/ 00 
+c09c/ 00 
+c09d/ 00 
+c09e/ 00 
+c09f/ 00 
+c0a0/ 00 
+c0a1/ 00 
+c0a2/ 00 
+c0a3/ 00 
+c0a4/ 00 
+c0a5/ 00 
+c0a6/ 00 
+c0a7/ 00 
+c0a8/ 00 
+c0a9/ 00 
+c0aa/ 00 
+c0ab/ 00 
+c0ac/ 00 
+c0ad/ 00 
+c0ae/ 00 
+c0af/ 00 
+c0b0/ 00 
+c0b1/ 00 
+c0b2/ 00 
+c0b3/ 00 
+c0b4/ 00 
+c0b5/ 00 
+c0b6/ 00 
+c0b7/ 00 
+c0b8/ 00 
+c0b9/ 00 
+c0ba/ 00 
+c0bb/ 00 
+c0bc/ 00 
+c0bd/ 00 
+c0be/ 00 
+c0bf/ 00 
+c0c0/ 00 
+c0c1/ 00 
+c0c2/ 00 
+c0c3/ 00 
+c0c4/ 00 
+c0c5/ 00 
+c0c6/ 00 
+c0c7/ 00 
+c0c8/ 00 
+c0c9/ 00 
+c0ca/ 00 
+c0cb/ 00 
+c0cc/ 00 
+c0cd/ 00 
+c0ce/ 00 
+c0cf/ 00 
+c0d0/ 00 
+c0d1/ 00 
+c0d2/ 00 
+c0d3/ 00 
+c0d4/ 00 
+c0d5/ 00 
+c0d6/ 00 
+c0d7/ 00 
+c0d8/ 00 
+c0d9/ 00 
+c0da/ 00 
+c0db/ 00 
+c0dc/ 00 
+c0dd/ 00 
+c0de/ 00 
+c0df/ 00 
+c0e0/ 00 
+c0e1/ 00 
+c0e2/ 00 
+c0e3/ 00 
+c0e4/ 00 
+c0e5/ 00 
+c0e6/ 00 
+c0e7/ 00 
+c0e8/ 00 
+c0e9/ 00 
+c0ea/ 00 
+c0eb/ 00 
+c0ec/ 00 
+c0ed/ 00 
+c0ee/ 00 
+c0ef/ 00 
+c0f0/ 00 
+c0f1/ 00 
+c0f2/ 00 
+c0f3/ 00 
+c0f4/ 00 
+c0f5/ 00 
+c0f6/ 00 
+c0f7/ 00 
+c0f8/ 00 
+c0f9/ 00 
+c0fa/ 00 
+c0fb/ 00 
+c0fc/ 00 
+c0fd/ 00 
+c0fe/ 00 
+c0ff/ 00 
+c100/ 00 
+c101/ 00 
+c102/ 00 
+c103/ 00 
+c104/ 00 
+c105/ 00 
+c106/ 00 
+c107/ 00 
+c108/ 00 
+c109/ 00 
+c10a/ 00 
+c10b/ 00 
+c10c/ 00 
+c10d/ 00 
+c10e/ 00 
+c10f/ 00 
+c110/ 00 
+c111/ 00 
+c112/ 00 
+c113/ 00 
+c114/ 00 
+c115/ 00 
+c116/ 00 
+c117/ 00 
+c118/ 00 
+c119/ 00 
+c11a/ 00 
+c11b/ 00 
+c11c/ 00 
+c11d/ 00 
+c11e/ 00 
+c11f/ 00 
+c120/ 00 
+c121/ 00 
+c122/ 00 
+c123/ 00 
+c124/ 00 
+c125/ 00 
+c126/ 00 
+c127/ 00 
+c128/ 00 
+c129/ 00 
+c12a/ 00 
+c12b/ 00 
+c12c/ 00 
+c12d/ 00 
+c12e/ 00 
+c12f/ 00 
+c130/ 00 
+c131/ 00 
+c132/ 00 
+c133/ 00 
+c134/ 00 
+c135/ 00 
+c136/ 00 
+c137/ 00 
+c138/ 00 
+c139/ 00 
+c13a/ 00 
+c13b/ 00 
+c13c/ 00 
+c13d/ 00 
+c13e/ 00 
+c13f/ 00 
+c140/ 00 
+c141/ 00 
+c142/ 00 
+c143/ 00 
+c144/ 00 
+c145/ 00 
+c146/ 00 
+c147/ 00 
+c148/ 00 
+c149/ 00 
+c14a/ 00 
+c14b/ 00 
+c14c/ 00 
+c14d/ 00 
+c14e/ 00 
+c14f/ 00 
+c150/ 00 
+c151/ 00 
+c152/ 00 
+c153/ 00 
+c154/ 00 
+c155/ 00 
+c156/ 00 
+c157/ 00 
+c158/ 00 
+c159/ 00 
+c15a/ 00 
+c15b/ 00 
+c15c/ 00 
+c15d/ 00 
+c15e/ 00 
+c15f/ 00 
+c160/ 00 
+c161/ 00 
+c162/ 00 
+c163/ 00 
+c164/ 00 
+c165/ 00 
+c166/ 00 
+c167/ 00 
+c168/ 00 
+c169/ 00 
+c16a/ 00 
+c16b/ 00 
+c16c/ 00 
+c16d/ 00 
+c16e/ 00 
+c16f/ 00 
+c170/ 00 
+c171/ 00 
+c172/ 00 
+c173/ 00 
+c174/ 00 
+c175/ 00 
+c176/ 00 
+c177/ 00 
+c178/ 00 
+c179/ 00 
+c17a/ 00 
+c17b/ 00 
+c17c/ 00 
+c17d/ 00 
+c17e/ 00 
+c17f/ 00 
+c180/ 00 
+c181/ 00 
+c182/ 00 
+c183/ 00 
+c184/ 00 
+c185/ 00 
+c186/ 00 
+c187/ 00 
+c188/ 00 
+c189/ 00 
+c18a/ 00 
+c18b/ 00 
+c18c/ 00 
+c18d/ 00 
+c18e/ 00 
+c18f/ 00 
+c190/ 00 
+c191/ 00 
+c192/ 00 
+c193/ 00 
+c194/ 00 
+c195/ 00 
+c196/ 00 
+c197/ 00 
+c198/ 00 
+c199/ 00 
+c19a/ 00 
+c19b/ 00 
+c19c/ 00 
+c19d/ 00 
+c19e/ 00 
+c19f/ 00 
+c1a0/ 00 
+c1a1/ 00 
+c1a2/ 00 
+c1a3/ 00 
+c1a4/ 00 
+c1a5/ 00 
+c1a6/ 00 
+c1a7/ 00 
+c1a8/ 00 
+c1a9/ 00 
+c1aa/ 00 
+c1ab/ 00 
+c1ac/ 00 
+c1ad/ 00 
+c1ae/ 00 
+c1af/ 00 
+c1b0/ 00 
+c1b1/ 00 
+c1b2/ 00 
+c1b3/ 00 
+c1b4/ 00 
+c1b5/ 00 
+c1b6/ 00 
+c1b7/ 00 
+c1b8/ 00 
+c1b9/ 00 
+c1ba/ 00 
+c1bb/ 00 
+c1bc/ 00 
+c1bd/ 00 
+c1be/ 00 
+c1bf/ 00 
+c1c0/ 00 
+c1c1/ 00 
+c1c2/ 00 
+c1c3/ 00 
+c1c4/ 00 
+c1c5/ 00 
+c1c6/ 00 
+c1c7/ 00 
+c1c8/ 00 
+c1c9/ 00 
+c1ca/ 00 
+c1cb/ 00 
+c1cc/ 00 
+c1cd/ 00 
+c1ce/ 00 
+c1cf/ 00 
+c1d0/ 00 
+c1d1/ 00 
+c1d2/ 00 
+c1d3/ 00 
+c1d4/ 00 
+c1d5/ 00 
+c1d6/ 00 
+c1d7/ 00 
+c1d8/ 00 
+c1d9/ 00 
+c1da/ 00 
+c1db/ 00 
+c1dc/ 00 
+c1dd/ 00 
+c1de/ 00 
+c1df/ 00 
+c1e0/ 00 
+c1e1/ 00 
+c1e2/ 00 
+c1e3/ 00 
+c1e4/ 00 
+c1e5/ 00 
+c1e6/ 00 
+c1e7/ 00 
+c1e8/ 00 
+c1e9/ 00 
+c1ea/ 00 
+c1eb/ 00 
+c1ec/ 00 
+c1ed/ 00 
+c1ee/ 00 
+c1ef/ 00 
+c1f0/ 00 
+c1f1/ 00 
+c1f2/ 00 
+c1f3/ 00 
+c1f4/ 00 
+c1f5/ 00 
+c1f6/ 00 
+c1f7/ 00 
+c1f8/ 00 
+c1f9/ 00 
+c1fa/ 00 
+c1fb/ 00 
+c1fc/ 00 
+c1fd/ 00 
+c1fe/ 00 
+c1ff/ 00 
+c200/ 00 
+

@@ -1,0 +1,72 @@
+#include <HERA.h>
+
+void HERA_main()
+{
+  DLABEL(Keyboard_2)
+  DSKIP(512)
+
+  CALL(FP_alt, poll_0)
+  SET(R1, Keyboard_2)
+  STORE(R4, 0, R15)
+  SET(R4, 0)
+
+  CALL(FP_alt, poll_1)
+
+
+  HALT()
+
+  LABEL(poll_0) //check if keyboard 0 has input, then print if it does
+   OPCODE(0x2a00)
+   MOVE(R1, R10)
+   BZ(return) //return right away, unless there is a char, then print it to screen one
+    CALL(FP_alt, PUTCHAR_1)
+    STORE(R3, 0, R15)
+    SETLO(R3, 0x0a)
+    CMP(R1, R3) //check if it is a new line character
+    BZ(return)
+    BR(poll_0)
+   LABEL(return)
+   RETURN(FP_alt, PC_ret) //else, if it is null, return
+
+
+  LABEL(PUTCHAR_1)
+   ADD(R0, R0, R1)  //Use ADD(R0,R0,R1) to output to screen 1
+   RETURN(FP_alt, PC_ret)
+
+
+
+
+
+
+  LABEL(poll_1) //check if keyboard 0 has input, then store it to memory if it is not 0. If it is a new line char (0a), then store it to memory start printing everything
+  OPCODE(0x2a01) //unique opcode to check if keyboard 0 has input. Does not set any flags
+  MOVE(R10, R2)
+  BZ(return_2)
+  ADD(R1, R1, R4)
+  STORE(R10, 0, R1)
+  INC(R4, 1)
+  STORE(R3, 1, R15)
+  SETLO(R3, 0x0a)
+  CMP(R10, R3) //check if it is a new line character
+  BZ(DEAL_WITH_NEWLINE)
+  BR(poll_1)
+  LABEL(DEAL_WITH_NEWLINE)
+  SET(R3, 0)
+  SET(R1, Keyboard_2)
+  LABEL(print_loop)
+  CMP(R3, R4)
+  BZ(return_2)
+  LOAD(R2, 0, R1)
+  CALL(FP_alt, PUTCHAR_2)
+  INC(R3, 1)
+  INC(R1, 1)
+  BR(print_loop)
+  LABEL(return_2)
+  RETURN(FP_alt, PC_ret)
+
+
+
+  LABEL(PUTCHAR_2)
+   ADD(R0, R0, R2)  //Use ADD(R0,R0,R2) to output to screen2
+   RETURN(FP_alt, PC_ret)
+}
