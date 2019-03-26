@@ -18,9 +18,11 @@ BR(TOP)
   HALT()
 
   LABEL(poll_0) //check if keyboard 0 has input, then print if it does
-   INC(SP, 2)
+   INC(SP, 4)
    STORE(PC_ret, 0, FP)
    STORE(FP_alt, 1, FP)
+   STORE(R2, 2, FP)
+   STORE(R4, 3, FP)
    OPCODE(0x2a00)
    MOVE(R1, R10)
    BZ(return) //return right away, unless there is a char, then print it to screen one
@@ -33,7 +35,9 @@ BR(TOP)
    LABEL(return)
    LOAD(PC_ret, 0, FP)
    LOAD(FP_alt, 1, FP)
-   DEC(SP, 2)
+   LOAD(R2, 2, FP)
+   LOAD(R4, 3, FP)
+   DEC(SP, 4)
    RETURN(FP_alt, PC_ret) //else, if it is null, return
 
 
@@ -44,9 +48,11 @@ BR(TOP)
 
 
   LABEL(poll_1) //check if keyboard 0 has input, then store it to memory if it is not 0. If it is a new line char (0a), then store it to memory start printing everything
-  INC(SP, 2)
-  STORE(PC_ret, 0, FP)
-  STORE(FP_alt, 1, FP)
+   INC(SP, 4)
+   STORE(PC_ret, 0, FP)
+   STORE(FP_alt, 1, FP)
+   STORE(R2, 2, FP)
+   STORE(R4, 3, FP)
   LABEL(L)
   SETLO(R10, 0)
   OPCODE(0x2a01) //unique opcode to check if keyboard 0 has input. Does not set any flags
@@ -73,9 +79,11 @@ BR(TOP)
        INC(R1, 1)
     BR(print_loop)
   LABEL(return_2)
-  LOAD(PC_ret, 0, FP)
-  LOAD(FP_alt, 1, FP)
-  DEC(SP, 2)
+   LOAD(PC_ret, 0, FP)
+   LOAD(FP_alt, 1, FP)
+   LOAD(R2, 2, FP)
+   LOAD(R4, 3, FP)
+   DEC(SP, 4)
   RETURN(FP_alt, PC_ret)
 
 }
