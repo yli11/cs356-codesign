@@ -8,80 +8,83 @@
 6/ 640f    	// STORE
 7/ e400    	// SETLO_FOR_SET
 8/ f400    	// SETHI_FOR_SET
-9/ ed2c    	// SETLO_FOR_SET
+9/ ed2b    	// SETLO_FOR_SET
 a/ fd00    	// SETHI_FOR_SET
 b/ 20cd    	// CALL
 c/ eb01    	// SETLO_FOR_SET
 d/ fb00    	// SETHI_FOR_SET
 e/ 100b    	// BR
 f/ 0    	// HALT
-10/ 3f81    	// (matching labels: poll_0) INC
+10/ 3f83    	// (matching labels: poll_0) INC
 11/ 6d0e    	// STORE
 12/ 6c1e    	// STORE
-13/ 2a00    	// OPCODE
-14/ 91a0    	// OR
-15/ eb26    	// SETLO_FOR_SET
-16/ fb00    	// SETHI_FOR_SET
-17/ 180b    	// BZ
-18/ ea00    	// SETLO
-19/ 9cf0    	// OR
-1a/ ed2a    	// SETLO_FOR_SET
-1b/ fd00    	// SETHI_FOR_SET
-1c/ 20cd    	// CALL
-1d/ e30a    	// SETLO
-1e/ 3068    	// FON
-1f/ b013    	// SUB
-20/ eb26    	// SETLO_FOR_SET
-21/ fb00    	// SETHI_FOR_SET
-22/ 180b    	// BZ
-23/ eb10    	// SETLO_FOR_SET
-24/ fb00    	// SETHI_FOR_SET
-25/ 100b    	// BR
-26/ 4d0e    	// (matching labels: return) LOAD
-27/ 4c1e    	// LOAD
-28/ 3fc1    	// DEC
-29/ 21cd    	// RETURN
-2a/ a001    	// (matching labels: PUTCHAR_1) ADD
-2b/ 21cd    	// RETURN
-2c/ 3f81    	// (matching labels: poll_1) INC
-2d/ 6d0e    	// STORE
-2e/ 6c1e    	// STORE
-2f/ ea00    	// (matching labels: L) SETLO
-30/ 2a01    	// OPCODE
-31/ 92a0    	// OR
-32/ eb4f    	// SETLO_FOR_SET
-33/ fb00    	// SETHI_FOR_SET
-34/ 180b    	// BZ
-35/ 6a01    	// STORE
-36/ 3180    	// INC
-37/ e30a    	// SETLO
-38/ 3068    	// FON
-39/ b0a3    	// SUB
-3a/ eb40    	// SETLO_FOR_SET
-3b/ fb00    	// SETHI_FOR_SET
-3c/ 180b    	// BZ
-3d/ eb2f    	// SETLO_FOR_SET
-3e/ fb00    	// SETHI_FOR_SET
-3f/ 100b    	// BR
-40/ e500    	// (matching labels: DEAL_WITH_NEWLINE) SETLO_FOR_SET
-41/ f500    	// SETHI_FOR_SET
-42/ e101    	// SETLO_FOR_SET
-43/ f1c0    	// SETHI_FOR_SET
-44/ 4201    	// (matching labels: print_loop) LOAD
-45/ a002    	// ADD
-46/ 3068    	// FON
-47/ b023    	// SUB
-48/ eb4f    	// SETLO_FOR_SET
-49/ fb00    	// SETHI_FOR_SET
-4a/ 180b    	// BZ
-4b/ 3180    	// INC
-4c/ eb44    	// SETLO_FOR_SET
-4d/ fb00    	// SETHI_FOR_SET
-4e/ 100b    	// BR
-4f/ 4d0e    	// (matching labels: return_2) LOAD
-50/ 4c1e    	// LOAD
-51/ 3fc1    	// DEC
-52/ 21cd    	// RETURN
+13/ 622e    	// STORE
+14/ 643e    	// STORE
+15/ 2a00    	// OPCODE
+16/ 91a0    	// OR
+17/ eb25    	// SETLO_FOR_SET
+18/ fb00    	// SETHI_FOR_SET
+19/ 180b    	// BZ
+1a/ ea00    	// SETLO
+1b/ a001    	// ADD
+1c/ e30a    	// SETLO
+1d/ 3068    	// FON
+1e/ b013    	// SUB
+1f/ eb25    	// SETLO_FOR_SET
+20/ fb00    	// SETHI_FOR_SET
+21/ 180b    	// BZ
+22/ eb10    	// SETLO_FOR_SET
+23/ fb00    	// SETHI_FOR_SET
+24/ 100b    	// BR
+25/ 4d0e    	// (matching labels: return) LOAD
+26/ 4c1e    	// LOAD
+27/ 422e    	// LOAD
+28/ 443e    	// LOAD
+29/ 3fc3    	// DEC
+2a/ 21cd    	// RETURN
+2b/ 3f83    	// (matching labels: poll_1) INC
+2c/ 6d0e    	// STORE
+2d/ 6c1e    	// STORE
+2e/ 622e    	// STORE
+2f/ 643e    	// STORE
+30/ ea00    	// (matching labels: L) SETLO
+31/ 2a01    	// OPCODE
+32/ 92a0    	// OR
+33/ eb50    	// SETLO_FOR_SET
+34/ fb00    	// SETHI_FOR_SET
+35/ 180b    	// BZ
+36/ 6a01    	// STORE
+37/ 3180    	// INC
+38/ e30a    	// SETLO
+39/ 3068    	// FON
+3a/ b0a3    	// SUB
+3b/ eb41    	// SETLO_FOR_SET
+3c/ fb00    	// SETHI_FOR_SET
+3d/ 180b    	// BZ
+3e/ eb30    	// SETLO_FOR_SET
+3f/ fb00    	// SETHI_FOR_SET
+40/ 100b    	// BR
+41/ e500    	// (matching labels: DEAL_WITH_NEWLINE) SETLO_FOR_SET
+42/ f500    	// SETHI_FOR_SET
+43/ e101    	// SETLO_FOR_SET
+44/ f1c0    	// SETHI_FOR_SET
+45/ 4201    	// (matching labels: print_loop) LOAD
+46/ a002    	// ADD
+47/ 3068    	// FON
+48/ b023    	// SUB
+49/ eb50    	// SETLO_FOR_SET
+4a/ fb00    	// SETHI_FOR_SET
+4b/ 180b    	// BZ
+4c/ 3180    	// INC
+4d/ eb45    	// SETLO_FOR_SET
+4e/ fb00    	// SETHI_FOR_SET
+4f/ 100b    	// BR
+50/ 4d0e    	// (matching labels: return_2) LOAD
+51/ 4c1e    	// LOAD
+52/ 422e    	// LOAD
+53/ 443e    	// LOAD
+54/ 3fc3    	// DEC
+55/ 21cd    	// RETURN
 // .DATA:
 c000/ c201
 c001/ 00 
