@@ -1,0 +1,22 @@
+// .CODE:
+0/ 6100    	// STORE
+1/ 6210    	// STORE
+2/ 6320    	// STORE
+3/ 6430    	// STORE
+4/ 6540    	// STORE
+5/ 6650    	// STORE
+6/ 6760    	// STORE
+7/ 6870    	// STORE
+8/ 6980    	// STORE
+9/ 6a90    	// STORE
+a/ 6ba0    	// STORE
+b/ 6cb0    	// STORE
+c/ 6dc0    	// STORE
+d/ 6ed0    	// STORE
+e/ 6fe0    	// STORE
+f/ 3170    	// SAVEF
+10/ 61f0    	// STORE
+11/ 0    	// HALT
+// .DATA:
+c000/ c001
+

@@ -1,0 +1,22 @@
+// .CODE:
+0/ 41f0    	// LOAD
+1/ 3178    	// RSTRF
+2/ 4100    	// LOAD
+3/ 4210    	// LOAD
+4/ 4320    	// LOAD
+5/ 4430    	// LOAD
+6/ 4540    	// LOAD
+7/ 4650    	// LOAD
+8/ 4760    	// LOAD
+9/ 4870    	// LOAD
+a/ 4980    	// LOAD
+b/ 4a90    	// LOAD
+c/ 4ba0    	// LOAD
+d/ 4cb0    	// LOAD
+e/ 4dc0    	// LOAD
+f/ 4ed0    	// LOAD
+10/ 4fe0    	// LOAD
+11/ 0    	// HALT
+// .DATA:
+c000/ c001
+

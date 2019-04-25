@@ -6,76 +6,23 @@ void HERA_main()
 {
 
  // Saving state of processor
- LABEL(save_state)
-
-    DLABEL(config_store) // Blocking out memory to store current config. information
-      DSKIP(50)
-
-    CBON()
-
-    // Adding test values to registers
-    SET(R3, 5)
-    SET(R4, 10)
-    SET(R6, 15)
-    SET(R7, 20)
-    SET(R8, 25)
-    SET(R9, 30)
-    SET(R10, 35)
-
-    SAVEF(R1) // Flags stored in R1
-    SET(R2, config_store) // Address in memeory where all information will be stored
-
-    // Saving flags
-    STORE(R2, 0, R1)
-    INC(R2, 1)
-
-    // Saving registers
-    // R3
-    STORE(R2, 0, R3)
-    INC(R2, 1)
-
-    // R4
-    STORE(R2, 0, R4)
-    INC(R2, 1)
-
-    // R5
-    STORE(R2, 0, R5)
-    INC(R2, 1)
-
-    // R6
-    STORE(R2, 0, R6)
-    INC(R2, 1)
-
-    // R7
-    STORE(R2, 0, R7)
-    INC(R2, 1)
-
-    // R8
-    STORE(R2, 0, R8)
-    INC(R2, 1)
-
-    // R9
-    STORE(R2, 0, R9)
-    INC(R2, 1)
-
-    // R10
-    STORE(R2, 0, R9)
-    INC(R2, 1)
-
-    // R1
-    STORE(R2, 0, R1)
-    INC(R2, 1)
-
-    // R2
-    STORE(R2, 0, R2)
-    INC(R2, 1)
-
-    // Save PC (?)
-
-    // Branch to interrupt
-    // BR(b)
-
-
+  STORE(R1, 0, R0)
+  STORE(R2, 1, R0)
+  STORE(R3, 2, R0)
+  STORE(R4, 3, R0)
+  STORE(R5, 4, R0)
+  STORE(R6, 5, R0)
+  STORE(R7, 6, R0)
+  STORE(R8, 7, R0)
+  STORE(R9, 8, R0)
+  STORE(R10, 9, R0)
+  STORE(R11, 10, R0)
+  STORE(R12, 11, R0)
+  STORE(R13, 12, R0)    
+  STORE(R14, 13, R0)  
+  STORE(R15, 14, R0)
+  SAVEF(R1)
+  STORE(R1, 15, R0)
   HALT()
 
 
