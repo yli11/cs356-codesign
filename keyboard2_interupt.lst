@@ -1,0 +1,65 @@
+// .CODE:
+0/ 6100    	// STORE
+1/ 6210    	// STORE
+2/ 6320    	// STORE
+3/ 6430    	// STORE
+4/ 6540    	// STORE
+5/ 6650    	// STORE
+6/ 6760    	// STORE
+7/ 6870    	// STORE
+8/ 6980    	// STORE
+9/ 6a90    	// STORE
+a/ 6ba0    	// STORE
+b/ 6cb0    	// STORE
+c/ 6dc0    	// STORE
+d/ 6ed0    	// STORE
+e/ 6fe0    	// STORE
+f/ 3170    	// SAVEF
+10/ 61f0    	// STORE
+11/ 3160    	// FON
+12/ ea00    	// SETLO
+13/ 2a01    	// OPCODE
+14/ e100    	// SETLO_FOR_SET
+15/ f140    	// SETHI_FOR_SET
+16/ 4401    	// LOAD
+17/ 3480    	// INC
+18/ 6401    	// STORE
+19/ a114    	// ADD
+1a/ 6a01    	// STORE
+1b/ e30a    	// SETLO
+1c/ 3068    	// FON
+1d/ b0a3    	// SUB
+1e/ 802    	// BZR
+1f/ c    	// BRR
+20/ a000    	// (matching labels: DEAL_WITH_NEWLINE) STORE
+21/ e101    	// SETLO_FOR_SET
+22/ f140    	// SETHI_FOR_SET
+23/ 4201    	// (matching labels: print_loop) LOAD
+24/ a002    	// ADD
+25/ 6001    	// STORE
+26/ 3068    	// FON
+27/ b023    	// SUB
+28/ 803    	// BZR
+29/ 3180    	// INC
+2a/ f9    	// BRR
+2b/ 41f0    	// (matching labels: restore) LOAD
+2c/ 3178    	// RSTRF
+2d/ 4100    	// LOAD
+2e/ 4210    	// LOAD
+2f/ 4320    	// LOAD
+30/ 4430    	// LOAD
+31/ 4540    	// LOAD
+32/ 4650    	// LOAD
+33/ 4760    	// LOAD
+34/ 4870    	// LOAD
+35/ 4980    	// LOAD
+36/ 4a90    	// LOAD
+37/ 4ba0    	// LOAD
+38/ 4cb0    	// LOAD
+39/ 4dc0    	// LOAD
+3a/ 4ed0    	// LOAD
+3b/ 4fe0    	// LOAD
+3c/ 2300    	// RTI
+// .DATA:
+c000/ c001
+
