@@ -18,7 +18,6 @@ void HERA_main()
 */
 
   // main program
-  SETCB()
   SWI(1)
   SWI(2)
   HALT()

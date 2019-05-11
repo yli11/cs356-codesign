@@ -1,0 +1,54 @@
+// .CODE:
+0/ 2201    	// SWI
+1/ 2202    	// SWI
+2/ 0    	// HALT
+3/ 3180    	// (matching labels: thread1) INC
+4/ 3380    	// INC
+5/ 3580    	// INC
+6/ 3780    	// INC
+7/ 3980    	// INC
+8/ fb    	// BRR
+9/ 3280    	// (matching labels: thread2) INC
+a/ 3480    	// INC
+b/ 3680    	// INC
+c/ 3880    	// INC
+d/ 3a80    	// INC
+e/ fb    	// BRR
+f/ 6100    	// (matching labels: store) STORE
+10/ 6210    	// STORE
+11/ 6320    	// STORE
+12/ 6430    	// STORE
+13/ 6540    	// STORE
+14/ 6650    	// STORE
+15/ 6760    	// STORE
+16/ 6870    	// STORE
+17/ 6980    	// STORE
+18/ 6a90    	// STORE
+19/ 6ba0    	// STORE
+1a/ 6cb0    	// STORE
+1b/ 6dc0    	// STORE
+1c/ 6ed0    	// STORE
+1d/ 6fe0    	// STORE
+1e/ 3170    	// SAVEF
+1f/ 61f0    	// STORE
+20/ 41f0    	// (matching labels: restore) LOAD
+21/ 3178    	// RSTRF
+22/ 4100    	// LOAD
+23/ 4210    	// LOAD
+24/ 4320    	// LOAD
+25/ 4430    	// LOAD
+26/ 4540    	// LOAD
+27/ 4650    	// LOAD
+28/ 4760    	// LOAD
+29/ 4870    	// LOAD
+2a/ 4980    	// LOAD
+2b/ 4a90    	// LOAD
+2c/ 4ba0    	// LOAD
+2d/ 4cb0    	// LOAD
+2e/ 4dc0    	// LOAD
+2f/ 4ed0    	// LOAD
+30/ 4fe0    	// LOAD
+31/ 2300    	// RTI
+// .DATA:
+c000/ c001
+
