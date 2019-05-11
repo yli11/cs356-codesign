@@ -1,88 +1,91 @@
 // .CODE:
-0/ 2201    	// SWI
+0/ 2201    	// (matching labels: main_start) SWI
 1/ 2202    	// SWI
-2/ 0    	// HALT
-3/ 3180    	// (matching labels: thread1) INC
-4/ 3380    	// INC
-5/ 3580    	// INC
-6/ 3780    	// INC
-7/ 3980    	// INC
-8/ fb    	// BRR
-9/ 3280    	// (matching labels: thread2) INC
-a/ 3480    	// INC
-b/ 3680    	// INC
-c/ 3880    	// INC
-d/ 3a80    	// INC
-e/ fb    	// BRR
-f/ 6100    	// (matching labels: store1) STORE
-10/ 6210    	// STORE
-11/ 6320    	// STORE
-12/ 6430    	// STORE
-13/ 6540    	// STORE
-14/ 6650    	// STORE
-15/ 6760    	// STORE
-16/ 6870    	// STORE
-17/ 6980    	// STORE
-18/ 6a90    	// STORE
-19/ 6ba0    	// STORE
-1a/ 6cb0    	// STORE
-1b/ 6dc0    	// STORE
-1c/ 6ed0    	// STORE
-1d/ 6fe0    	// STORE
-1e/ 3170    	// SAVEF
-1f/ 61f0    	// STORE
-20/ 7100    	// (matching labels: store2) STORE
-21/ 7210    	// STORE
-22/ 7320    	// STORE
-23/ 7430    	// STORE
-24/ 7540    	// STORE
-25/ 7650    	// STORE
-26/ 7760    	// STORE
-27/ 7870    	// STORE
-28/ 7980    	// STORE
-29/ 7a90    	// STORE
-2a/ 7bb0    	// STORE
-2b/ 7cb0    	// STORE
-2c/ 7dc0    	// STORE
-2d/ 7ed0    	// STORE
-2e/ 7fe0    	// STORE
-2f/ 3170    	// SAVEF
-30/ 71f0    	// STORE
-31/ 41f0    	// (matching labels: restore1) LOAD
-32/ 3178    	// RSTRF
-33/ 4100    	// LOAD
-34/ 4210    	// LOAD
-35/ 4320    	// LOAD
-36/ 4430    	// LOAD
-37/ 4540    	// LOAD
-38/ 4650    	// LOAD
-39/ 4760    	// LOAD
-3a/ 4870    	// LOAD
-3b/ 4980    	// LOAD
-3c/ 4a90    	// LOAD
-3d/ 4ba0    	// LOAD
-3e/ 4cb0    	// LOAD
-3f/ 4dc0    	// LOAD
-40/ 4ed0    	// LOAD
-41/ 4fe0    	// LOAD
-42/ 51f0    	// (matching labels: restore2) LOAD
-43/ 3178    	// RSTRF
-44/ 5100    	// LOAD
-45/ 5210    	// LOAD
-46/ 5320    	// LOAD
-47/ 5430    	// LOAD
-48/ 5540    	// LOAD
-49/ 5650    	// LOAD
-4a/ 5760    	// LOAD
-4b/ 5870    	// LOAD
-4c/ 5980    	// LOAD
-4d/ 5a90    	// LOAD
-4e/ 5ba0    	// LOAD
-4f/ 5cb0    	// LOAD
-50/ 5dc0    	// LOAD
-51/ 5ed0    	// LOAD
-52/ 5fe0    	// LOAD
-53/ 2300    	// RTI
+2/ eb00    	// SETLO_FOR_SET
+3/ fb00    	// SETHI_FOR_SET
+4/ 100b    	// BR
+5/ 0    	// HALT
+6/ 3180    	// (matching labels: thread1) INC
+7/ 3380    	// INC
+8/ 3580    	// INC
+9/ 3780    	// INC
+a/ 3980    	// INC
+b/ fb    	// BRR
+c/ 3280    	// (matching labels: thread2) INC
+d/ 3480    	// INC
+e/ 3680    	// INC
+f/ 3880    	// INC
+10/ 3a80    	// INC
+11/ fb    	// BRR
+12/ 6100    	// (matching labels: store1) STORE
+13/ 6210    	// STORE
+14/ 6320    	// STORE
+15/ 6430    	// STORE
+16/ 6540    	// STORE
+17/ 6650    	// STORE
+18/ 6760    	// STORE
+19/ 6870    	// STORE
+1a/ 6980    	// STORE
+1b/ 6a90    	// STORE
+1c/ 6ba0    	// STORE
+1d/ 6cb0    	// STORE
+1e/ 6dc0    	// STORE
+1f/ 6ed0    	// STORE
+20/ 6fe0    	// STORE
+21/ 3170    	// SAVEF
+22/ 61f0    	// STORE
+23/ 7100    	// (matching labels: store2) STORE
+24/ 7210    	// STORE
+25/ 7320    	// STORE
+26/ 7430    	// STORE
+27/ 7540    	// STORE
+28/ 7650    	// STORE
+29/ 7760    	// STORE
+2a/ 7870    	// STORE
+2b/ 7980    	// STORE
+2c/ 7a90    	// STORE
+2d/ 7bb0    	// STORE
+2e/ 7cb0    	// STORE
+2f/ 7dc0    	// STORE
+30/ 7ed0    	// STORE
+31/ 7fe0    	// STORE
+32/ 3170    	// SAVEF
+33/ 71f0    	// STORE
+34/ 41f0    	// (matching labels: restore1) LOAD
+35/ 3178    	// RSTRF
+36/ 4100    	// LOAD
+37/ 4210    	// LOAD
+38/ 4320    	// LOAD
+39/ 4430    	// LOAD
+3a/ 4540    	// LOAD
+3b/ 4650    	// LOAD
+3c/ 4760    	// LOAD
+3d/ 4870    	// LOAD
+3e/ 4980    	// LOAD
+3f/ 4a90    	// LOAD
+40/ 4ba0    	// LOAD
+41/ 4cb0    	// LOAD
+42/ 4dc0    	// LOAD
+43/ 4ed0    	// LOAD
+44/ 4fe0    	// LOAD
+45/ 51f0    	// (matching labels: restore2) LOAD
+46/ 3178    	// RSTRF
+47/ 5100    	// LOAD
+48/ 5210    	// LOAD
+49/ 5320    	// LOAD
+4a/ 5430    	// LOAD
+4b/ 5540    	// LOAD
+4c/ 5650    	// LOAD
+4d/ 5760    	// LOAD
+4e/ 5870    	// LOAD
+4f/ 5980    	// LOAD
+50/ 5a90    	// LOAD
+51/ 5ba0    	// LOAD
+52/ 5cb0    	// LOAD
+53/ 5dc0    	// LOAD
+54/ 5ed0    	// LOAD
+55/ 5fe0    	// LOAD
+56/ 2300    	// RTI
 // .DATA:
 c000/ c001
 

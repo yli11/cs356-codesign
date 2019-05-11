@@ -18,8 +18,10 @@ void HERA_main()
 */
 
   // main program
+  LABEL(main_start)
   SWI(1)
   SWI(2)
+  BR(main_start)
   HALT()
 
 
